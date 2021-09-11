@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #2b0725;
+}
+
+  /* ESTILIZAÇÃO DO LOGIN*/
+
+  .login_title {
+      margin-bottom: 32px;
+      color: #bd049e;
+      transition: 0.3s;
+  }
+  
+  .login_title:hover {
+    color: #57034c;
+    transition: 0.3s;
+}
+
+
+  .login {
+      justify-content: center; /* Joga o conteudo todo do Login pro centro.*/
+      align-items: center;   /* Joga o conteudo todo do Login pro centro da tela*/
+      height: 100vh;
+      background: linear-gradient(120deg, #f509cd, #410136);
+      display: flex;
+  }
+
+
+  .login-container{   /* Estilizando o CARD do Login*/
+      min-height: 55vh;
+      width: 25vw;
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 32px;
+      border-radius: 10px;
+  }
+
+
+  .login-form{              /* Estilizando o FORM.*/
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+
+  .login-input{          /* Estilizando os inputs de Login e  Senha*/
+      height: 8vh;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 8px;
+      border: unset;
+      outline: none;
+  }
+
+
+  .login-input-border{ /* Estilizando uma linha embaixo do Input do email e Input da senha*/
+      height: 2px;
+      width: 100%;
+      margin-bottom: 16px;
+      background-color: #cfcfcf;
+      transition: .3s ease-in-out;
+  }
+
+
+
+.login-input-border::after{
+    content:'';
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: linear-gradient(120deg, #f509cd, #410136);
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.login-btn{
+    height: 5vh;
+    width: 60%;
+    outline: none;
+    background: linear-gradient(120deg, #c506a5, #df35c2, #410136);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-size: 200%;
+    margin-bottom: 32px;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.login-reset {
+    font-size: 16px;
+    color: #860575;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-reset:hover{
+    color:#e40bc0;
+    transition: 0.3s;
+}

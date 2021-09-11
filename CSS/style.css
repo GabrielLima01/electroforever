@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-img {/* Background com efeito parallax 
+    background: url("../imgs/bg.jpg") no-repeat center center;*/
+    background-color: #2b0725;
+    background: linear-gradient(120deg, #f509cd, #410136);
+}
+
+
+.content-img {/* Background com efeito parallax */
+    background: url("../imgs/bg2.jpg") no-repeat center center;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed; 
+    padding-top: 200px;
+    padding-bottom: 200px; 
+    color: #ffff;        
+}             
+
+
+.col-xs-12 h1{
+    color: #fff;
+    transition: 0.3s;
+    -webkit-text-stroke-width: 1px; /* largura da borda em volta do texto */
+    -webkit-text-stroke-color: black; /* cor da borda em volta do texto*/
+}
+
+
+
+
+h1 {
+    color: #fff;
+    font-weight: bold;
+    filter: brightness(100%);
+}
+
+p {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+
+/* ----------------------- CSS Effect - By Gabriel ----------------------- */
+/* ----------------------- CSS Effect - By Gabriel ----------------------- */
+/* ----------------------- CSS Effect - By Gabriel ----------------------- */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    overflow: hidden;
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-width: 4px;
+    border-style: solid;
+    border-color: #4d0d42;
+    border-radius: 35px;
+    transition: 0.5s ;  /* Animação do CARD voltando ao seu estado normal */
+}
+
+.container .card .imgbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .imgbox{
+    transform: translateY(-100px);
+}
+
+.container .card .imgbox img{
+    max-width: 100%;
+    margin: 0 0 20px;
+    transition: 0.5s ease-in-out;
+    border-radius: 25px;
+}
+
+.container .card:hover .imgbox img{  /* Animação de quando passa o mouse sobre o CARD*/
+    transform: translate(2px,2px) ; /* os valores da esquerda interferem no eixo Y e os valores da direita interferem no eixo X */
+    border-style: solid;
+    border-color: #4d0d42;
+    border-radius: 35px;
+}
+
+
+.card:hover {  /* Estilização do CARD quando a animação está ativa. */
+   background-color: #4d0d42;
+   transition: 0.3s;
+   
+}
+
+
+.container .card .imgbox h2 {
+    color: #4d0d42;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .card:hover .imgbox h2 { /* Estilização do H2 quando a animação está ativa. */
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .card .content { /* Estilização do conteudo dentro do card */
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+}
+
+
+.card a {
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.card a:hover{
+    transition: 0.1s;
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+.pos{  /** ---- Texto abaixo do nome dos DJs ---- **/
+    color: #fff;
+    font-size: 17px;
+}
+
+/******************* End of Effect *************/
+/******************* End of Effect *************/
+/******************* End of Effect *************/
+/******************* End of Effect *************/
+
+
+/******************* MENU *************/
+/******************* MENU *************/
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition:0.4s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-size: 2vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex; /* Coloca a Logo e a lista de navegação um do lado do outro */
+    justify-content: space-around;  /* deixa o logo e a lista de navegação bem espaçados */
+    align-items: center;
+    font-family: system-ui, Helvetica, Arial sans-serif;
+    background: #4d0d42;
+    height: 8vh; /* Usamos "VH" ao invés de "PX", pois "VH" se adequa ao tamanho da tela */
+    
+}
+
+.nav-list{
+    list-style: none; /* Remove a bolinha do lado do menu */
+    display: flex; /* faz o menu se alinhar horizontalmente e quando a tela for menor, se alinha verticalmente. */
+}
+
+.nav-list li { /* espaçamento no menu */
+    letter-spacing: 3px;
+    margin-left: 32px; /* distância entre um <li> e outro */
+}
+
+/*menu Mobile*/
+.mobile-menu {
+    display:none; /* o menu hamburguer só vai aparecer quando a tela estiver menor */
+    cursor: pointer; /* quando o usuário passar sobre o menu hamburguer, o ícone do mouse vai virar uma mãozinha */
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px; /* espaçamento das 3 linhas no menu mobile */
+    transition: 0.5s;
+}
+
+@media (max-width: 999px) {     /* quando a tela for menor que esse tamanho, a nav lit tera um valor absolute, ou seja, 
+                               podemos posicionar a navegação onde quisermos */
+
+    body {
+        overflow-x: hidden; /* se tem algo que vai além da tela do site, fica escondido */
+     }                               
+
+
+.logo {
+        font-size: 4vw;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh; /* Faz com que fique abaixo do Header*/
+        right: 0;  /* jogando o menu responsivo pra direita */
+        width: 18vw; 
+        height: 92vh;
+        background: #4d0d42;
+        flex-direction: column;  /* faz com que o menu responsivo fique com a nav list uma embaixo da outra */
+        align-items: center;
+        justify-content: space-around; /* espalhando o nav list no espaço disponivel */
+        transform: translateX(100%);  /* Movendo a navegação pra fora da tela, pois só queremos que ela apareça quando 
+                                      o usuário clicar no botão do menu */
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+         margin-left: 0;
+         opacity: 0;
+    
+    }
+
+    .mobile-menu {
+        display: block;
+    }  
+}
+    .nav-list.active{
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from{
+          opacity: 0;
+          transform: translateX(50px);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* CONTEUDO DO SITE */
+
+
+@media screen and (max-width: 769px){
+    section, aside {
+        width: 100%;
+    }
+}
+
+
+
+/* Botão de LOGIN */
+/* Botão de LOGIN */
+.login-btn{
+    height: 5vh;
+    width: 60%;
+    outline: none;
+    background: linear-gradient(120deg, #c506a5, #df35c2, #410136);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-size: 200%;
+    margin-bottom: 32px;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+/* MELHORES DA SEMANA - EDM */
+.EDMweek{
+    border-style: solid;
+    border-color: #4d0d42;
+    border-radius: 10px;
+    float: left;
+   
+}
+
+
+.EDMweek img{
+    border-style: solid;
+    border-radius: 10px;
+}
+

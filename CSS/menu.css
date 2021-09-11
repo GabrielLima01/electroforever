@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/******************* MENU *************/
+/******************* MENU *************/
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition:0.4s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-size: 2vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex; /* Coloca a Logo e a lista de navegação um do lado do outro */
+    justify-content: space-around;  /* deixa o logo e a lista de navegação bem espaçados */
+    align-items: center;
+    font-family: system-ui, Helvetica, Arial sans-serif;
+    background: #4d0d42;
+    height: 8vh; /* Usamos "VH" ao invés de "PX", pois "VH" se adequa ao tamanho da tela */
+    
+}
+
+.nav-list{
+    list-style: none; /* Remove a bolinha do lado do menu */
+    display: flex; /* faz o menu se alinhar horizontalmente e quando a tela for menor, se alinha verticalmente. */
+}
+
+.nav-list li { /* espaçamento no menu */
+    letter-spacing: 3px;
+    margin-left: 32px; /* distância entre um <li> e outro */
+}
+
+/*menu Mobile*/
+.mobile-menu {
+    display:none; /* o menu hamburguer só vai aparecer quando a tela estiver menor */
+    cursor: pointer; /* quando o usuário passar sobre o menu hamburguer, o ícone do mouse vai virar uma mãozinha */
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px; /* espaçamento das 3 linhas no menu mobile */
+    transition: 0.5s;
+}
+
+@media (max-width: 999px) {     /* quando a tela for menor que esse tamanho, a nav lit tera um valor absolute, ou seja, 
+                               podemos posicionar a navegação onde quisermos */
+
+    body {
+        overflow-x: hidden; /* se tem algo que vai além da tela do site, fica escondido */
+     }                               
+
+
+.logo {
+        font-size: 4vw;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh; /* Faz com que fique abaixo do Header*/
+        right: 0;  /* jogando o menu responsivo pra direita */
+        width: 18vw; 
+        height: 92vh;
+        background: #4d0d42;
+        flex-direction: column;  /* faz com que o menu responsivo fique com a nav list uma embaixo da outra */
+        align-items: center;
+        justify-content: space-around; /* espalhando o nav list no espaço disponivel */
+        transform: translateX(100%);  /* Movendo a navegação pra fora da tela, pois só queremos que ela apareça quando 
+                                      o usuário clicar no botão do menu */
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+         margin-left: 0;
+         opacity: 0;
+    
+    }
+
+    .mobile-menu {
+        display: block;
+    }  
+}
+    .nav-list.active{
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from{
+          opacity: 0;
+          transform: translateX(50px);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
